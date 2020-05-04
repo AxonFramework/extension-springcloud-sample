@@ -1,0 +1,27 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="GiftCard Eureka Client - Node 1" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="eureka-client" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="org.axonframework.extension.springcloud.example.eureka.client.EurekaClientApplication" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <additionalParameters>
+      <param>
+        <option name="enabled" value="true" />
+        <option name="name" value="server.port" />
+        <option name="value" value="8080" />
+      </param>
+      <param>
+        <option name="enabled" value="true" />
+        <option name="name" value="node.number" />
+        <option name="value" value="1" />
+      </param>
+      <param>
+        <option name="enabled" value="true" />
+        <option name="name" value="dispatching.enabled" />
+        <option name="value" value="true" />
+      </param>
+    </additionalParameters>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
