@@ -26,8 +26,8 @@
         <java.version>1.8</java.version>
         <kotlin.version>1.3.72</kotlin.version>
         <!-- Axon -->
-        <axon.version>4.3.2</axon.version>
-        <axon.springcloud.version>4.3</axon.springcloud.version>
+        <axon.version>4.3.3</axon.version>
+        <axon.springcloud.version>4.3.1</axon.springcloud.version>
         <!-- Spring -->
         <spring-cloud-commons.version>2.0.1.RELEASE</spring-cloud-commons.version>
         <!-- Eureka -->
@@ -77,10 +77,19 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-core</artifactId>
+                <version>2.3.0.1</version>
+            </dependency>
+            <dependency>
                 <groupId>javax.xml.bind</groupId>
                 <artifactId>jaxb-api</artifactId>
-                <version>2.3.0</version>
-                <scope>test</scope>
+                <version>2.3.1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-impl</artifactId>
+                <version>2.3.1</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
