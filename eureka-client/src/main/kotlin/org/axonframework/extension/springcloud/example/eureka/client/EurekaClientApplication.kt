@@ -1,9 +1,11 @@
 package org.axonframework.extension.springcloud.example.eureka.client
 
+import com.thoughtworks.xstream.XStream
 import org.axonframework.commandhandling.distributed.RoutingStrategy
+import org.axonframework.extension.springcloud.example.giftcard.configuration.AxonConfiguration
 import org.axonframework.extensions.springcloud.DistributedCommandBusProperties
-import org.axonframework.extensions.springcloud.commandhandling.SpringCloudCommandRouter
 import org.axonframework.extensions.springcloud.commandhandling.SpringCloudHttpBackupCommandRouter
+import org.axonframework.serialization.xml.XStreamSerializer
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.cloud.client.discovery.DiscoveryClient
@@ -44,17 +46,23 @@ class CommandRouterConfiguration {
             restTemplate: RestTemplate,
             routingStrategy: RoutingStrategy,
             distributedCommandBusProperties: DistributedCommandBusProperties
-    ): SpringCloudCommandRouter {
-        return SpringCloudHttpBackupCommandRouter.builder()
-                .discoveryClient(discoveryClient)
-                .localServiceInstance(localServiceInstance)
-                .restTemplate(restTemplate)
-                .routingStrategy(routingStrategy)
-                .messageRoutingInformationEndpoint(distributedCommandBusProperties.springCloud.fallbackUrl)
-                .contextRootMetadataPropertyName(
-                        distributedCommandBusProperties.springCloud.contextRootMetadataPropertyName
-                )
-                .enforceHttpDiscovery()
-                .build()
+    ) = SpringCloudHttpBackupCommandRouter.builder()
+            .discoveryClient(discoveryClient)
+            .localServiceInstance(localServiceInstance)
+            .restTemplate(restTemplate)
+            .routingStrategy(routingStrategy)
+            .messageRoutingInformationEndpoint(distributedCommandBusProperties.springCloud.fallbackUrl)
+            .contextRootMetadataPropertyName(
+                    distributedCommandBusProperties.springCloud.contextRootMetadataPropertyName
+            )
+            .serializer(safeXStreamSerializer())
+            .enforceHttpDiscovery()
+            .build()
+
+    fun safeXStreamSerializer(): XStreamSerializer {
+        val xStream = XStream()
+        xStream.classLoader = AxonConfiguration::class.java.classLoader
+        xStream.allowTypesByWildcard(arrayOf("org.axonframework.extension.**"))
+        return XStreamSerializer.builder().xStream(xStream).build()
     }
 }
