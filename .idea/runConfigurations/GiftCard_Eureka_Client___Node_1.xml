@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="GiftCard Eureka Client - Node 1" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+  <configuration default="false" name="GiftCard Eureka Client - Node 1" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="Eureka">
     <module name="eureka-client" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="org.axonframework.extension.springcloud.example.eureka.client.EurekaClientApplication" />
     <option name="ALTERNATIVE_JRE_PATH" />
