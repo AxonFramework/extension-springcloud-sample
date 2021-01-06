@@ -15,9 +15,13 @@ The profiles allow you to select the Spring Cloud implementation of your choice 
 The base domain to be used in every profile is the `giftcard` module, which depends on the `axon-spring-boot-starter` and `axon-springcloud-spring-boot-starter` modules.
 To interact with the domain it contains both a scheduled client and a REST client.
 
-By default, scheduled command dispatching is turned on. 
+By default, scheduled command dispatching is turned on : this will simulate a running users that interact with the instance, sending commands. 
 This can be disabled with the `dispatching.enabled` property.
-For convenience to Intellij IDEA users, the REST client can be interacted with through the `requests.http`
+
+You can interact with the demo in multiple ways:
+ - `RestClient` expose some endpoints : you can contact them using `curl` request
+ - through`swagger-ui.html` api documentation (eg [http://localhost:8081/swagger-ui.html](http://localhost:8081/swagger-ui.html) )
+ - for convenience to Intellij IDEA users, through the provided `requests.http`
 
 Note that all message-transitions are logged on INFO log level to show which node is handling a given command in a distributed set up. 
 
@@ -37,8 +41,8 @@ Depending on the profile the start up process will differ:
 
  - **Spring Cloud Netflix / Eureka** - First, start up the `eureka-server`. 
  The provided `application.properties` should be sufficient.
- Then, start two or more `eureka-client` instances.
- When starting these it is required to have different `server.port` numbers, as well as provided the `node.number` property to keep them apart.
+ 
+ - **Eureka Client** - You will need to start two or more `eureka-client` instances. When starting these it is required to have different `server.port` numbers, as well as provided the `node.number` property to keep them apart.
  Subsequently, you can toggle whether a node should have scheduled dispatching enabled with the `dispatching.enabled` property.
  
 > **Intellij IDEA**
@@ -46,7 +50,9 @@ Depending on the profile the start up process will differ:
 > A basic set of Intellij IDEA run configuration is provided in this project.
 > They should be registered automatically if you open this repository through Intellij.
 > If they aren't, you can find the `.xml` config files in the `~/.idea/runConfiguration` folder.
-  
+ 
+You can check the status using [Spring Eureka console](http://localhost:8761/) available by default on port 8761 : you should see two *GIFTCARD EUREKA CLIENT* instances registered to your Eureka server.
+
 Contributing
 ------------
 
