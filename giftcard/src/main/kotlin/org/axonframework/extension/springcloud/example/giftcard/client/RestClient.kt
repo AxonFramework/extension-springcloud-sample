@@ -1,9 +1,6 @@
 package org.axonframework.extension.springcloud.example.giftcard.client
 
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 /**
  * A [RestController] annotated client which delegates POST calls through to the [GiftCardClient].
@@ -11,6 +8,9 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping("/api")
 class RestClient(private val giftCardClient: GiftCardClient) {
+
+    @GetMapping
+    fun helloWorld() = "Hello World!"
 
     @PostMapping("/issue/{cardId}")
     fun issueCard(@PathVariable("cardId") cardId: String) {

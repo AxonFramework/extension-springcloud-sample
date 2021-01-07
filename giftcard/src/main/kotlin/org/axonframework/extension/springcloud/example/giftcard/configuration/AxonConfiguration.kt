@@ -21,7 +21,6 @@ import org.springframework.scheduling.annotation.EnableScheduling
 @EnableScheduling
 class AxonConfiguration {
 
-
     @Bean
     fun inMemoryEventStorageEngine(): InMemoryEventStorageEngine = InMemoryEventStorageEngine()
 
