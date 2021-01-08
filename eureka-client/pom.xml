@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.axonframework.extension.springcloud</groupId>
         <artifactId>axon-springcloud-example</artifactId>
-        <version>4.3</version>
+        <version>4.4</version>
     </parent>
 
     <dependencies>
@@ -20,7 +20,7 @@
         <dependency>
             <groupId>org.axonframework.extension.springcloud</groupId>
             <artifactId>giftcard</artifactId>
-            <version>0.1.0</version>
+            <version>4.4</version>
         </dependency>
         <!-- Eureka -->
         <dependency>
