@@ -55,14 +55,6 @@ class CommandRouterConfiguration {
             .contextRootMetadataPropertyName(
                     distributedCommandBusProperties.springCloud.contextRootMetadataPropertyName
             )
-            .serializer(safeXStreamSerializer())
             .enforceHttpDiscovery()
             .build()
-
-    fun safeXStreamSerializer(): XStreamSerializer {
-        val xStream = XStream()
-        xStream.classLoader = AxonConfiguration::class.java.classLoader
-        xStream.allowTypesByWildcard(arrayOf("org.axonframework.extension.**"))
-        return XStreamSerializer.builder().xStream(xStream).build()
-    }
 }
