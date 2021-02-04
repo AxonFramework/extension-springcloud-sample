@@ -27,7 +27,7 @@
         <kotlin.version>1.4.30</kotlin.version>
         <!-- Axon -->
         <axon.version>4.4.6</axon.version>
-        <axon.springcloud.version>4.5-SNAPSHOT</axon.springcloud.version>
+        <axon.springcloud.version>4.4</axon.springcloud.version>
         <!-- Spring -->
         <spring-cloud-release.version>Hoxton.SR9</spring-cloud-release.version>
         <!-- Other -->
