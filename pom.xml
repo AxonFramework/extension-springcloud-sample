@@ -26,7 +26,7 @@
         <java.version>1.8</java.version>
         <kotlin.version>1.4.32</kotlin.version>
         <!-- Axon -->
-        <axon.version>4.4.7</axon.version>
+        <axon.version>4.4.8</axon.version>
         <axon.springcloud.version>4.4</axon.springcloud.version>
         <!-- Spring -->
         <spring-cloud-release.version>Hoxton.SR10</spring-cloud-release.version>
