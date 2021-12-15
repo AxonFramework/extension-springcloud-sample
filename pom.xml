@@ -24,7 +24,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!-- Language -->
         <java.version>1.8</java.version>
-        <kotlin.version>1.6.0</kotlin.version>
+        <kotlin.version>1.6.10</kotlin.version>
         <!-- Axon -->
         <axon.version>4.5.5</axon.version>
         <axon.springcloud.version>4.4</axon.springcloud.version>
