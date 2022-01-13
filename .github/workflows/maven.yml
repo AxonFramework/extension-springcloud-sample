@@ -3,6 +3,7 @@ name: Spring Cloud Extension Sample
 on:
   push:
     branches:
+      - main
       - master
   pull_request:
 
@@ -35,28 +36,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven
 
-      - name: Maven build
+      - name: Build
         run: |
-          mvn -B -U clean verify
+          ./mvnw -B -U clean verify
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Notify success to Slack
-        if: success()
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-        uses: voxmedia/github-action-slack-notify-build@v1.1.2
-        with:
-          channel_id: CAGSEC92A
-          status: SUCCESS
-          color: good
-
-      - name: Notify failure to Slack
-        if: failure()
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-        uses: voxmedia/github-action-slack-notify-build@v1.1.2
-        with:
-          channel_id: CAGSEC92A
-          status: FAILED
-          color: danger
