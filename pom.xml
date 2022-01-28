@@ -6,7 +6,7 @@
 
     <groupId>org.axonframework.extension.springcloud</groupId>
     <artifactId>axon-springcloud-example</artifactId>
-    <version>4.5</version>
+    <version>4.6.0</version>
     <packaging>pom</packaging>
 
     <name>Axon Framework - Spring Cloud Extension - Example</name>
