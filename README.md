@@ -20,7 +20,7 @@ This can be disabled with the `dispatching.enabled` property.
 
 You can interact with the demo in multiple ways:
  - `RestClient` expose some endpoints : you can contact them using `curl` request
- - through`swagger-ui.html` api documentation (eg [http://localhost:8081/swagger-ui.html](http://localhost:8081/swagger-ui.html) )
+ - through`swagger-ui.html` api documentation (e.g., [http://localhost:8081/swagger-ui.html](http://localhost:8081/swagger-ui.html) )
  - for convenience to Intellij IDEA users, through the provided `requests.http`
 
 Note that all message-transitions are logged on INFO log level to show which node is handling a given command in a distributed set up. 
@@ -37,7 +37,7 @@ How-to start up
 ---------------
 
 First, select the profile you like to test.
-Depending on the profile the start up process will differ:
+Depending on the profile the start-up process will differ:
 
  - **Spring Cloud Netflix / Eureka** - First, start up the `eureka-server`. 
  The provided `application.properties` should be sufficient.
