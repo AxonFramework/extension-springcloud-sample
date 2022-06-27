@@ -26,7 +26,7 @@
         <java.version>1.8</java.version>
         <kotlin.version>1.7.0</kotlin.version>
         <!-- Axon -->
-        <axon.version>4.5.11</axon.version>
+        <axon.version>4.5.12</axon.version>
         <axon.springcloud.version>4.5</axon.springcloud.version>
         <!-- Spring -->
         <spring-cloud-release.version>2021.0.3</spring-cloud-release.version>
