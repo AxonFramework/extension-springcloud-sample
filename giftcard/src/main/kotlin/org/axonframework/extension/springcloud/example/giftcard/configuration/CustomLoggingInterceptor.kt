@@ -15,34 +15,34 @@ import java.util.function.BiFunction
  * implementation and the fact it doesn't blur out the entire exception.
  */
 class CustomLoggingInterceptor(
-        loggerName: String
+    loggerName: String
 ) : MessageDispatchInterceptor<Message<*>>, MessageHandlerInterceptor<Message<*>> {
 
     private var logger: Logger = LoggerFactory.getLogger(loggerName)
 
-    override fun handle(messages: MutableList<out Message<*>>?): BiFunction<Int, Message<*>, Message<*>> {
+    override fun handle(messages: MutableList<out Message<*>>): BiFunction<Int, Message<*>, Message<*>> {
         return BiFunction { _: Int, message: Message<*> ->
             logger.info("Dispatched message: [{}]", message.payloadType.simpleName)
             message
         }
     }
 
-    override fun handle(unitOfWork: UnitOfWork<out Message<*>>?, interceptorChain: InterceptorChain?): Any? {
-        val message = unitOfWork?.message
+    override fun handle(unitOfWork: UnitOfWork<out Message<*>>, interceptorChain: InterceptorChain): Any? {
+        val message = unitOfWork.message
         logger.info("Handling message: [{}]", message!!.payloadType.simpleName)
         return try {
-            val returnValue: Any? = interceptorChain!!.proceed()
-            logger.info("[{}] executed successfully with a [{}] return value",
-                    message.payloadType.simpleName,
-                    if (returnValue == null) "null" else returnValue.javaClass.simpleName
+            val returnValue: Any? = interceptorChain.proceed()
+            logger.info(
+                "[{}] executed successfully with a [{}] return value",
+                message.payloadType.simpleName,
+                if (returnValue == null) "null" else returnValue.javaClass.simpleName
             )
             returnValue
         } catch (e: Exception) {
             logger.info(
-                    String.format("[%s] execution failed with message [%s]", message.payloadType.simpleName, e.message)
+                String.format("[%s] execution failed with message [%s]", message.payloadType.simpleName, e.message)
             )
             throw e
         }
     }
-
 }
