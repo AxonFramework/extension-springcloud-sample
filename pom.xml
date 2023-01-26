@@ -29,7 +29,7 @@
         <axon.version>4.6.3</axon.version>
         <axon.springcloud.version>4.6.0</axon.springcloud.version>
         <!-- Spring -->
-        <spring-cloud-release.version>2022.0.0</spring-cloud-release.version>
+        <spring-cloud-release.version>2022.0.1</spring-cloud-release.version>
         <!-- Other -->
         <javax.jaxb-api.version>2.3.1</javax.jaxb-api.version>
     </properties>
