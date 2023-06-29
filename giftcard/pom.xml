@@ -23,12 +23,10 @@
         <dependency>
             <groupId>org.axonframework</groupId>
             <artifactId>axon-spring-boot-starter</artifactId>
-            <version>${axon.version}</version>
         </dependency>
         <dependency>
             <groupId>org.axonframework.extensions.springcloud</groupId>
             <artifactId>axon-springcloud-spring-boot-starter</artifactId>
-            <version>${axon.springcloud.version}</version>
         </dependency>
 
         <dependency>
