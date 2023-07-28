@@ -1,17 +1,28 @@
 version: 2
 updates:
-- package-ecosystem: maven
-  directory: "/"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 5
-  # Specify labels for pull requests
-  labels:
-    - "Type: Dependency Upgrade"
-    - "Priority 1: Must"
-    - "Status: In Progress"
-  # Add reviewers
-  reviewers:
-    - "corradom"
-    - "smcvb"
-  milestone: 6
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 5
+    labels:
+      - "Type: Dependency Upgrade"
+      - "Priority 1: Must"
+    milestone: 6
+    reviewers:
+      - "CodeDrivenMitch"
+      - "gklijs"
+      - "smcvb"
+  - package-ecosystem: maven
+    directory: "/"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 5
+    labels:
+      - "Type: Dependency Upgrade"
+      - "Priority 1: Must"
+    milestone: 6
+    reviewers:
+      - "CodeDrivenMitch"
+      - "gklijs"
+      - "smcvb"
