@@ -26,7 +26,7 @@
         <java.version>17</java.version>
         <kotlin.version>1.9.21</kotlin.version>
         <!-- Axon -->
-        <axon.version>4.9.1</axon.version>
+        <axon.version>4.9.2</axon.version>
         <!-- Spring -->
         <spring-cloud-release.version>2023.0.0</spring-cloud-release.version>
         <!-- Other -->
