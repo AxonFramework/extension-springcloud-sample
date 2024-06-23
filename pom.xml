@@ -15,7 +15,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.5</version>
+        <version>3.3.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -24,11 +24,11 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!-- Language -->
         <java.version>17</java.version>
-        <kotlin.version>1.9.23</kotlin.version>
+        <kotlin.version>2.0.0</kotlin.version>
         <!-- Axon -->
         <axon.version>4.9.4</axon.version>
         <!-- Spring -->
-        <spring-cloud-release.version>2023.0.1</spring-cloud-release.version>
+        <spring-cloud-release.version>2023.0.2</spring-cloud-release.version>
         <!-- Other -->
         <javax.jaxb-api.version>2.3.1</javax.jaxb-api.version>
     </properties>
