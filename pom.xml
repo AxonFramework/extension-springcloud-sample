@@ -6,7 +6,7 @@
 
     <groupId>org.axonframework.extension.springcloud</groupId>
     <artifactId>axon-springcloud-example</artifactId>
-    <version>4.9.0</version>
+    <version>4.10.0</version>
     <packaging>pom</packaging>
 
     <name>Axon Framework - Spring Cloud Extension - Example</name>
@@ -26,7 +26,7 @@
         <java.version>17</java.version>
         <kotlin.version>2.0.0</kotlin.version>
         <!-- Axon -->
-        <axon.version>4.9.4</axon.version>
+        <axon.version>4.10.0</axon.version>
         <!-- Spring -->
         <spring-cloud-release.version>2023.0.3</spring-cloud-release.version>
         <!-- Other -->
