@@ -24,7 +24,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!-- Language -->
         <java.version>17</java.version>
-        <kotlin.version>2.0.0</kotlin.version>
+        <kotlin.version>2.0.10</kotlin.version>
         <!-- Axon -->
         <axon.version>4.10.0</axon.version>
         <!-- Spring -->
