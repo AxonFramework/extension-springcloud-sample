@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.axonframework.extension.springcloud</groupId>
         <artifactId>axon-springcloud-example</artifactId>
-        <version>4.10.0</version>
+        <version>4.11.0</version>
     </parent>
 
     <artifactId>giftcard</artifactId>
