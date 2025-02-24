@@ -15,7 +15,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.2</version>
+        <version>3.4.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -26,7 +26,7 @@
         <java.version>17</java.version>
         <kotlin.version>2.1.10</kotlin.version>
         <!-- Axon -->
-        <axon.version>4.11.0</axon.version>
+        <axon.version>4.11.1</axon.version>
         <!-- Spring -->
         <spring-cloud-release.version>2024.0.0</spring-cloud-release.version>
         <!-- Other -->
@@ -162,7 +162,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.13.0</version>
+                <version>3.14.0</version>
                 <configuration>
                     <target>${java.version}</target>
                     <source>${java.version}</source>
