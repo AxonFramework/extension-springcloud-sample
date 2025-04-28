@@ -15,7 +15,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.4</version>
+        <version>3.4.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -26,7 +26,7 @@
         <java.version>17</java.version>
         <kotlin.version>2.1.20</kotlin.version>
         <!-- Axon -->
-        <axon.version>4.11.1</axon.version>
+        <axon.version>4.11.2</axon.version>
         <!-- Spring -->
         <spring-cloud-release.version>2024.0.1</spring-cloud-release.version>
         <!-- Other -->
